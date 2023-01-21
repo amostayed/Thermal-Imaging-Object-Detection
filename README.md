@@ -34,3 +34,9 @@ A PyTorch implementation of the [YOLOv5](https://github.com/ultralytics/yolov5) 
 - Two notebooks inside the `inference` folder to generate AP and detection results for the video test set.
 - They are self-explanatory.
 - A trained model is provide in the `saved models` folder.
+- AP for the trained model:
+
+  | Model  | Person  | Car |
+  | :------------ |:---------------:| -----:|
+  | YOLOv5      | **81.26** | **79.28** |
+  | FLIR Baseline (YOLOX)      | 75.33        |   75.23 |
