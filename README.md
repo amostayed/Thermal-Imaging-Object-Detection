@@ -24,8 +24,8 @@ A PyTorch implementation of the [YOLOv5](https://github.com/ultralytics/yolov5) 
 - Remember to change the configurations accordingly for custom file names and anchor box clustering.
 - Note: anchor boxes are entered largest scale to smallest in the yaml file
 - Two pre-trained models are provided in the `pretrained models` folder:
-  - coco.pth: YOLOv5m pretrained on COCO (from [YOLOv5 source](https://github.com/ultralytics/yolov5))
-  - cityscape.pth: which is a model trained by me on the [Cityscapes](https://www.cityscapes-dataset.com/) dataset. By default, this model will be loaded for FLIR training.
+  - `coco.pth` : YOLOv5m pretrained on COCO (from [YOLOv5 source](https://github.com/ultralytics/yolov5))
+  - `cityscape.pth` : which is a model trained by me on the [Cityscapes](https://www.cityscapes-dataset.com/) dataset. By default, this model will be loaded for FLIR training.
   - Set `load from` key to `null` in the configuration file for training from scratch
   - run `python training.py --config-path ./configuration/config.yml` from the root directory (enter your custom config file)
   - The trained model will be saved in `saved models`
