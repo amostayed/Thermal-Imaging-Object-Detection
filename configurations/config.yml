@@ -1,0 +1,124 @@
+---
+ # dataset path
+ train path: "dataset/images_thermal_train"
+ val path: "dataset/images_thermal_val"
+ test path: "dataset/video_thermal_test"
+
+ # anchors
+ anchors:
+   - 
+     - 
+       - 97.
+       - 68.
+     - 
+       - 64.
+       - 138.
+     - 
+       - 150.
+       - 99.
+     - 
+       - 153.
+       - 186.
+     - 
+       - 280.
+       - 242.
+   - 
+     - 
+       - 49.
+       - 19.
+     - 
+       - 19.
+       - 50.
+     - 
+       - 37.
+       - 33.
+     - 
+       - 33.
+       - 80.
+     - 
+       - 64.
+       - 45.
+   - 
+     - 
+       - 5.
+       - 7.
+     - 
+       - 7.
+       - 17.
+     - 
+       - 14.
+       - 11.
+     - 
+       - 11.
+       - 29.
+     - 
+       - 22.
+       - 20.
+
+ # annotattion path and names
+ annot path: "labels/annotations"
+ train fname: "annotations_thermal_train.txt"
+ val fname: "annotations_thermal_val.txt"
+ test fname: "annotations_thermal_test.txt"
+
+ # data loader
+ batch size: 12
+ image size: 640       # training image size
+ num class: 10
+ cls weights:          # for weighted sampler
+   - 1
+   - 8
+   - 1
+   - 10 
+   - 10
+   - 10
+   - 4
+   - 10
+   - 3
+   - 10
+ num workers: 4
+ 
+ # tarining
+ epochs: 100
+ LR: 0.0001
+ momentum: 0.9
+ weight decay: 0.0005
+ save path: 'saved models'          # where to save trained models
+ save name: 'YOLO_FLIR'
+
+ # loss (Lagrange multipliers)
+ l_coord: 1. 
+ l_obj: 1.
+ l_noobj: 1.0
+ l_cls: 1.
+ l_loc: 1.
+
+ # network
+ category frequency:      # for initializing the classification head bias (may be better to load from a file instead)
+   - 50748
+   - 7237
+   - 73623
+   - 1116 
+   - 2245
+   - 829
+   - 16198
+   - 1095
+   - 20770
+   - 1373
+ load path: 'pretrained models/'             # path from which pretrained models to load
+ load from: 'cityscape'                      # cityscape or coco (.pth file) or null if no pre-training
+
+ # prediction
+ beta: 0.5                                   # weights conf & localization
+ obj_thres: 0.95
+ conf_thres: 0.85
+ loc_thres: 0.7
+
+ # Matrix NMS (https://arxiv.org/pdf/2003.10152.pdf)
+ iou_threshold: 0.5
+ sigma: 0.5
+ nms_thres: 0.65
+ top_k: 15 
+
+ # log
+ print frequency: 5                          # how many times to print per epoch

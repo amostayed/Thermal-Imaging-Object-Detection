@@ -1,0 +1,5 @@
+# example generate annotation file for thermal training images
+# while running from the labels directory
+python generate_labels.py --json-path "../dataset/images_thermal_train" --text-path "annotations" --name "annotations_thermal_train"
+# example generate annotation file for thermal test images
+python generate_labels.py --json-path "../dataset/video_thermal_test" --text-path "annotations" --name "annotations_thermal_test"
