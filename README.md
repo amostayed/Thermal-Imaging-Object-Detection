@@ -3,7 +3,7 @@
   <img src="/images/gif/demo.gif" alt="animated" width="512" height="384"/>
 </p>
 
-A PyTorch implementation of the [YOLOv5](https://github.com/ultralytics/yolov5) model for thermal object detection. This repository builds a medium YOLOv5 model on the [FLIR ADAS v2.0](https://www.flir.com/oem/adas/adas-dataset-form/) dataset. 
+A PyTorch implementation of the [YOLOv5](https://github.com/ultralytics/yolov5) model for thermal object detection. This repository builds a medium YOLOv5 model on the [FLIR ADAS v2.0](https://www.flir.com/oem/adas/adas-dataset-form/) dataset. This implementation uses a single detection head across scales unlike YOLO v3-v5.   
 
 ## Data Preparation
 - [Download](https://www.flir.com/oem/adas/adas-dataset-form/) the FLIR thermal dataset.
